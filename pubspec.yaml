@@ -4,7 +4,6 @@ version: 0.0.1
 
 environment:
   sdk: ^3.10.4
-  flutter: ">=1.17.0"
 
 dependencies:
   protobuf: ^6.0.0
