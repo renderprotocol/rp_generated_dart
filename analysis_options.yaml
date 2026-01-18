@@ -1,4 +1,3 @@
-include: package:flutter_lints/flutter.yaml
 analyzer:
   errors:
     unnecessary_library_name: ignore
