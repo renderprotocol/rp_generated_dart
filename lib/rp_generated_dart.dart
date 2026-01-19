@@ -1,6 +1,16 @@
 /// Render Protocol Generated Exports
 library rp_generated_dart;
 
+export 'proto/renderprotocol/api/v1/rp_api_handshake_service.pb.dart';
+export 'proto/renderprotocol/api/v1/rp_api_handshake_service.pbenum.dart';
+export 'proto/renderprotocol/api/v1/rp_api_handshake_service.pbgrpc.dart';
+export 'proto/renderprotocol/api/v1/rp_api_handshake_service.pbjson.dart';
+export 'proto/renderprotocol/api/v1/rp_api_metadata.pb.dart';
+export 'proto/renderprotocol/api/v1/rp_api_metadata.pbenum.dart';
+export 'proto/renderprotocol/api/v1/rp_api_metadata.pbjson.dart';
+export 'proto/renderprotocol/api/v1/rp_api_platform.pb.dart';
+export 'proto/renderprotocol/api/v1/rp_api_platform.pbenum.dart';
+export 'proto/renderprotocol/api/v1/rp_api_platform.pbjson.dart';
 export 'proto/renderprotocol/ui/v1/rp_ui_color.pb.dart';
 export 'proto/renderprotocol/ui/v1/rp_ui_color.pbenum.dart';
 export 'proto/renderprotocol/ui/v1/rp_ui_color.pbjson.dart';
