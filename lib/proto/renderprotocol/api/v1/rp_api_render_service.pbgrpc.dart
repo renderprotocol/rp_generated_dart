@@ -32,20 +32,20 @@ class RPRenderServiceClient extends $grpc.Client {
 
   RPRenderServiceClient(super.channel, {super.options, super.interceptors});
 
-  $grpc.ResponseFuture<$0.RPFetchViewResponse> rPFetchView(
-    $0.RPFetchViewRequest request, {
+  $grpc.ResponseFuture<$0.RPFetchRenderTreeResponse> rPFetchRenderTree(
+    $0.RPFetchRenderTreeRequest request, {
     $grpc.CallOptions? options,
   }) {
-    return $createUnaryCall(_$rPFetchView, request, options: options);
+    return $createUnaryCall(_$rPFetchRenderTree, request, options: options);
   }
 
   // method descriptors
 
-  static final _$rPFetchView =
-      $grpc.ClientMethod<$0.RPFetchViewRequest, $0.RPFetchViewResponse>(
-          '/proto.renderprotocol.api.v1.RPRenderService/RPFetchView',
-          ($0.RPFetchViewRequest value) => value.writeToBuffer(),
-          $0.RPFetchViewResponse.fromBuffer);
+  static final _$rPFetchRenderTree = $grpc.ClientMethod<
+          $0.RPFetchRenderTreeRequest, $0.RPFetchRenderTreeResponse>(
+      '/proto.renderprotocol.api.v1.RPRenderService/RPFetchRenderTree',
+      ($0.RPFetchRenderTreeRequest value) => value.writeToBuffer(),
+      $0.RPFetchRenderTreeResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('proto.renderprotocol.api.v1.RPRenderService')
@@ -53,22 +53,23 @@ abstract class RPRenderServiceBase extends $grpc.Service {
   $core.String get $name => 'proto.renderprotocol.api.v1.RPRenderService';
 
   RPRenderServiceBase() {
-    $addMethod(
-        $grpc.ServiceMethod<$0.RPFetchViewRequest, $0.RPFetchViewResponse>(
-            'RPFetchView',
-            rPFetchView_Pre,
-            false,
-            false,
-            ($core.List<$core.int> value) =>
-                $0.RPFetchViewRequest.fromBuffer(value),
-            ($0.RPFetchViewResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RPFetchRenderTreeRequest,
+            $0.RPFetchRenderTreeResponse>(
+        'RPFetchRenderTree',
+        rPFetchRenderTree_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RPFetchRenderTreeRequest.fromBuffer(value),
+        ($0.RPFetchRenderTreeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$0.RPFetchViewResponse> rPFetchView_Pre($grpc.ServiceCall $call,
-      $async.Future<$0.RPFetchViewRequest> $request) async {
-    return rPFetchView($call, await $request);
+  $async.Future<$0.RPFetchRenderTreeResponse> rPFetchRenderTree_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.RPFetchRenderTreeRequest> $request) async {
+    return rPFetchRenderTree($call, await $request);
   }
 
-  $async.Future<$0.RPFetchViewResponse> rPFetchView(
-      $grpc.ServiceCall call, $0.RPFetchViewRequest request);
+  $async.Future<$0.RPFetchRenderTreeResponse> rPFetchRenderTree(
+      $grpc.ServiceCall call, $0.RPFetchRenderTreeRequest request);
 }

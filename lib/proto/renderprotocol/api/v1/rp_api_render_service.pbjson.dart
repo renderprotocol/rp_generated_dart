@@ -15,23 +15,24 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use rPFetchViewRequestDescriptor instead')
-const RPFetchViewRequest$json = {
-  '1': 'RPFetchViewRequest',
+@$core.Deprecated('Use rPFetchRenderTreeRequestDescriptor instead')
+const RPFetchRenderTreeRequest$json = {
+  '1': 'RPFetchRenderTreeRequest',
   '2': [
     {'1': 'session_token', '3': 1, '4': 1, '5': 9, '10': 'sessionToken'},
     {'1': 'view_id', '3': 2, '4': 1, '5': 9, '10': 'viewId'},
   ],
 };
 
-/// Descriptor for `RPFetchViewRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rPFetchViewRequestDescriptor = $convert.base64Decode(
-    'ChJSUEZldGNoVmlld1JlcXVlc3QSIwoNc2Vzc2lvbl90b2tlbhgBIAEoCVIMc2Vzc2lvblRva2'
-    'VuEhcKB3ZpZXdfaWQYAiABKAlSBnZpZXdJZA==');
+/// Descriptor for `RPFetchRenderTreeRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rPFetchRenderTreeRequestDescriptor =
+    $convert.base64Decode(
+        'ChhSUEZldGNoUmVuZGVyVHJlZVJlcXVlc3QSIwoNc2Vzc2lvbl90b2tlbhgBIAEoCVIMc2Vzc2'
+        'lvblRva2VuEhcKB3ZpZXdfaWQYAiABKAlSBnZpZXdJZA==');
 
-@$core.Deprecated('Use rPFetchViewResponseDescriptor instead')
-const RPFetchViewResponse$json = {
-  '1': 'RPFetchViewResponse',
+@$core.Deprecated('Use rPFetchRenderTreeResponseDescriptor instead')
+const RPFetchRenderTreeResponse$json = {
+  '1': 'RPFetchRenderTreeResponse',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {
@@ -45,7 +46,8 @@ const RPFetchViewResponse$json = {
   ],
 };
 
-/// Descriptor for `RPFetchViewResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rPFetchViewResponseDescriptor = $convert.base64Decode(
-    'ChNSUEZldGNoVmlld1Jlc3BvbnNlEg4KAmlkGAEgASgJUgJpZBI4CgR2aWV3GAIgASgLMiQucH'
-    'JvdG8ucmVuZGVycHJvdG9jb2wudWkudjEuUlBXaWRnZXRSBHZpZXc=');
+/// Descriptor for `RPFetchRenderTreeResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rPFetchRenderTreeResponseDescriptor =
+    $convert.base64Decode(
+        'ChlSUEZldGNoUmVuZGVyVHJlZVJlc3BvbnNlEg4KAmlkGAEgASgJUgJpZBI4CgR2aWV3GAIgAS'
+        'gLMiQucHJvdG8ucmVuZGVycHJvdG9jb2wudWkudjEuUlBXaWRnZXRSBHZpZXc=');

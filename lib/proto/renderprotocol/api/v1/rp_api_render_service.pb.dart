@@ -18,8 +18,8 @@ import '../../ui/v1/rp_ui_core.pb.dart' as $1;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
-class RPFetchViewRequest extends $pb.GeneratedMessage {
-  factory RPFetchViewRequest({
+class RPFetchRenderTreeRequest extends $pb.GeneratedMessage {
+  factory RPFetchRenderTreeRequest({
     $core.String? sessionToken,
     $core.String? viewId,
   }) {
@@ -29,17 +29,17 @@ class RPFetchViewRequest extends $pb.GeneratedMessage {
     return result;
   }
 
-  RPFetchViewRequest._();
+  RPFetchRenderTreeRequest._();
 
-  factory RPFetchViewRequest.fromBuffer($core.List<$core.int> data,
+  factory RPFetchRenderTreeRequest.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RPFetchViewRequest.fromJson($core.String json,
+  factory RPFetchRenderTreeRequest.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RPFetchViewRequest',
+      _omitMessageNames ? '' : 'RPFetchRenderTreeRequest',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'proto.renderprotocol.api.v1'),
       createEmptyInstance: create)
@@ -48,23 +48,24 @@ class RPFetchViewRequest extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RPFetchViewRequest clone() => deepCopy();
+  RPFetchRenderTreeRequest clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RPFetchViewRequest copyWith(void Function(RPFetchViewRequest) updates) =>
-      super.copyWith((message) => updates(message as RPFetchViewRequest))
-          as RPFetchViewRequest;
+  RPFetchRenderTreeRequest copyWith(
+          void Function(RPFetchRenderTreeRequest) updates) =>
+      super.copyWith((message) => updates(message as RPFetchRenderTreeRequest))
+          as RPFetchRenderTreeRequest;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RPFetchViewRequest create() => RPFetchViewRequest._();
+  static RPFetchRenderTreeRequest create() => RPFetchRenderTreeRequest._();
   @$core.override
-  RPFetchViewRequest createEmptyInstance() => create();
+  RPFetchRenderTreeRequest createEmptyInstance() => create();
   @$core.pragma('dart2js:noInline')
-  static RPFetchViewRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RPFetchViewRequest>(create);
-  static RPFetchViewRequest? _defaultInstance;
+  static RPFetchRenderTreeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RPFetchRenderTreeRequest>(create);
+  static RPFetchRenderTreeRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get sessionToken => $_getSZ(0);
@@ -85,8 +86,8 @@ class RPFetchViewRequest extends $pb.GeneratedMessage {
   void clearViewId() => $_clearField(2);
 }
 
-class RPFetchViewResponse extends $pb.GeneratedMessage {
-  factory RPFetchViewResponse({
+class RPFetchRenderTreeResponse extends $pb.GeneratedMessage {
+  factory RPFetchRenderTreeResponse({
     $core.String? id,
     $1.RPWidget? view,
   }) {
@@ -96,17 +97,17 @@ class RPFetchViewResponse extends $pb.GeneratedMessage {
     return result;
   }
 
-  RPFetchViewResponse._();
+  RPFetchRenderTreeResponse._();
 
-  factory RPFetchViewResponse.fromBuffer($core.List<$core.int> data,
+  factory RPFetchRenderTreeResponse.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RPFetchViewResponse.fromJson($core.String json,
+  factory RPFetchRenderTreeResponse.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RPFetchViewResponse',
+      _omitMessageNames ? '' : 'RPFetchRenderTreeResponse',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'proto.renderprotocol.api.v1'),
       createEmptyInstance: create)
@@ -116,23 +117,24 @@ class RPFetchViewResponse extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RPFetchViewResponse clone() => deepCopy();
+  RPFetchRenderTreeResponse clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RPFetchViewResponse copyWith(void Function(RPFetchViewResponse) updates) =>
-      super.copyWith((message) => updates(message as RPFetchViewResponse))
-          as RPFetchViewResponse;
+  RPFetchRenderTreeResponse copyWith(
+          void Function(RPFetchRenderTreeResponse) updates) =>
+      super.copyWith((message) => updates(message as RPFetchRenderTreeResponse))
+          as RPFetchRenderTreeResponse;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RPFetchViewResponse create() => RPFetchViewResponse._();
+  static RPFetchRenderTreeResponse create() => RPFetchRenderTreeResponse._();
   @$core.override
-  RPFetchViewResponse createEmptyInstance() => create();
+  RPFetchRenderTreeResponse createEmptyInstance() => create();
   @$core.pragma('dart2js:noInline')
-  static RPFetchViewResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RPFetchViewResponse>(create);
-  static RPFetchViewResponse? _defaultInstance;
+  static RPFetchRenderTreeResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RPFetchRenderTreeResponse>(create);
+  static RPFetchRenderTreeResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
