@@ -46,6 +46,15 @@ const RPModifier$json = {
       '9': 0,
       '10': 'backgroundColor'
     },
+    {
+      '1': 'clip',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.proto.renderprotocol.ui.v1.RPClip',
+      '9': 0,
+      '10': 'clip'
+    },
   ],
   '8': [
     {'1': 'value'},
@@ -58,7 +67,8 @@ final $typed_data.Uint8List rPModifierDescriptor = $convert.base64Decode(
     'YxLlJQQm9yZGVySABSBmJvcmRlchJBCgdwYWRkaW5nGAIgASgLMiUucHJvdG8ucmVuZGVycHJv'
     'dG9jb2wudWkudjEuUlBQYWRkaW5nSABSB3BhZGRpbmcSUAoQYmFja2dyb3VuZF9jb2xvchgDIA'
     'EoCzIjLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQQ29sb3JIAFIPYmFja2dyb3VuZENv'
-    'bG9yQgcKBXZhbHVl');
+    'bG9yEjgKBGNsaXAYBCABKAsyIi5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUENsaXBIAF'
+    'IEY2xpcEIHCgV2YWx1ZQ==');
 
 @$core.Deprecated('Use rPPaddingDescriptor instead')
 const RPPadding$json = {
@@ -75,22 +85,6 @@ const RPPadding$json = {
 final $typed_data.Uint8List rPPaddingDescriptor = $convert.base64Decode(
     'CglSUFBhZGRpbmcSEAoDdG9wGAEgASgCUgN0b3ASFgoGYm90dG9tGAIgASgCUgZib3R0b20SEg'
     'oEbGVmdBgDIAEoAlIEbGVmdBIUCgVyaWdodBgEIAEoAlIFcmlnaHQ=');
-
-@$core.Deprecated('Use rPMarginDescriptor instead')
-const RPMargin$json = {
-  '1': 'RPMargin',
-  '2': [
-    {'1': 'top', '3': 1, '4': 1, '5': 2, '10': 'top'},
-    {'1': 'bottom', '3': 2, '4': 1, '5': 2, '10': 'bottom'},
-    {'1': 'left', '3': 3, '4': 1, '5': 2, '10': 'left'},
-    {'1': 'right', '3': 4, '4': 1, '5': 2, '10': 'right'},
-  ],
-};
-
-/// Descriptor for `RPMargin`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rPMarginDescriptor = $convert.base64Decode(
-    'CghSUE1hcmdpbhIQCgN0b3AYASABKAJSA3RvcBIWCgZib3R0b20YAiABKAJSBmJvdHRvbRISCg'
-    'RsZWZ0GAMgASgCUgRsZWZ0EhQKBXJpZ2h0GAQgASgCUgVyaWdodA==');
 
 @$core.Deprecated('Use rPBorderDescriptor instead')
 const RPBorder$json = {

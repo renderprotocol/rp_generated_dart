@@ -12,8 +12,10 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'rp_ui_alignment.pbenum.dart' as $3;
 import 'rp_ui_image.pb.dart' as $2;
 import 'rp_ui_modifier.pb.dart' as $0;
 import 'rp_ui_text.pb.dart' as $1;
@@ -182,9 +184,13 @@ class RPWidget extends $pb.GeneratedMessage {
 class RPRow extends $pb.GeneratedMessage {
   factory RPRow({
     $core.Iterable<RPWidget>? children,
+    $fixnum.Int64? spacing,
+    $3.RPAxisAlignment? alignment,
   }) {
     final result = create();
     if (children != null) result.children.addAll(children);
+    if (spacing != null) result.spacing = spacing;
+    if (alignment != null) result.alignment = alignment;
     return result;
   }
 
@@ -204,6 +210,9 @@ class RPRow extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..pPM<RPWidget>(1, _omitFieldNames ? '' : 'children',
         subBuilder: RPWidget.create)
+    ..aInt64(2, _omitFieldNames ? '' : 'spacing')
+    ..aE<$3.RPAxisAlignment>(3, _omitFieldNames ? '' : 'alignment',
+        enumValues: $3.RPAxisAlignment.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -226,14 +235,36 @@ class RPRow extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $pb.PbList<RPWidget> get children => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get spacing => $_getI64(1);
+  @$pb.TagNumber(2)
+  set spacing($fixnum.Int64 value) => $_setInt64(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSpacing() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpacing() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $3.RPAxisAlignment get alignment => $_getN(2);
+  @$pb.TagNumber(3)
+  set alignment($3.RPAxisAlignment value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasAlignment() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAlignment() => $_clearField(3);
 }
 
 class RPColumn extends $pb.GeneratedMessage {
   factory RPColumn({
     $core.Iterable<RPWidget>? children,
+    $fixnum.Int64? spacing,
+    $3.RPAxisAlignment? alignment,
   }) {
     final result = create();
     if (children != null) result.children.addAll(children);
+    if (spacing != null) result.spacing = spacing;
+    if (alignment != null) result.alignment = alignment;
     return result;
   }
 
@@ -253,6 +284,9 @@ class RPColumn extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..pPM<RPWidget>(1, _omitFieldNames ? '' : 'children',
         subBuilder: RPWidget.create)
+    ..aInt64(2, _omitFieldNames ? '' : 'spacing')
+    ..aE<$3.RPAxisAlignment>(3, _omitFieldNames ? '' : 'alignment',
+        enumValues: $3.RPAxisAlignment.values)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -275,6 +309,24 @@ class RPColumn extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(1)
   $pb.PbList<RPWidget> get children => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get spacing => $_getI64(1);
+  @$pb.TagNumber(2)
+  set spacing($fixnum.Int64 value) => $_setInt64(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSpacing() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpacing() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $3.RPAxisAlignment get alignment => $_getN(2);
+  @$pb.TagNumber(3)
+  set alignment($3.RPAxisAlignment value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasAlignment() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearAlignment() => $_clearField(3);
 }
 
 class RPStack extends $pb.GeneratedMessage {

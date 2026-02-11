@@ -102,13 +102,24 @@ const RPRow$json = {
       '6': '.proto.renderprotocol.ui.v1.RPWidget',
       '10': 'children'
     },
+    {'1': 'spacing', '3': 2, '4': 1, '5': 3, '10': 'spacing'},
+    {
+      '1': 'alignment',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.proto.renderprotocol.ui.v1.RPAxisAlignment',
+      '10': 'alignment'
+    },
   ],
 };
 
 /// Descriptor for `RPRow`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List rPRowDescriptor = $convert.base64Decode(
     'CgVSUFJvdxJACghjaGlsZHJlbhgBIAMoCzIkLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLnYxLl'
-    'JQV2lkZ2V0UghjaGlsZHJlbg==');
+    'JQV2lkZ2V0UghjaGlsZHJlbhIYCgdzcGFjaW5nGAIgASgDUgdzcGFjaW5nEkkKCWFsaWdubWVu'
+    'dBgDIAEoDjIrLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQQXhpc0FsaWdubWVudFIJYW'
+    'xpZ25tZW50');
 
 @$core.Deprecated('Use rPColumnDescriptor instead')
 const RPColumn$json = {
@@ -122,13 +133,24 @@ const RPColumn$json = {
       '6': '.proto.renderprotocol.ui.v1.RPWidget',
       '10': 'children'
     },
+    {'1': 'spacing', '3': 2, '4': 1, '5': 3, '10': 'spacing'},
+    {
+      '1': 'alignment',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.proto.renderprotocol.ui.v1.RPAxisAlignment',
+      '10': 'alignment'
+    },
   ],
 };
 
 /// Descriptor for `RPColumn`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List rPColumnDescriptor = $convert.base64Decode(
     'CghSUENvbHVtbhJACghjaGlsZHJlbhgBIAMoCzIkLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLn'
-    'YxLlJQV2lkZ2V0UghjaGlsZHJlbg==');
+    'YxLlJQV2lkZ2V0UghjaGlsZHJlbhIYCgdzcGFjaW5nGAIgASgDUgdzcGFjaW5nEkkKCWFsaWdu'
+    'bWVudBgDIAEoDjIrLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQQXhpc0FsaWdubWVudF'
+    'IJYWxpZ25tZW50');
 
 @$core.Deprecated('Use rPStackDescriptor instead')
 const RPStack$json = {
