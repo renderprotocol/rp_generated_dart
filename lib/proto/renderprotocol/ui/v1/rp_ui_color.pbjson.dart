@@ -19,13 +19,13 @@ import 'dart:typed_data' as $typed_data;
 const RPColor$json = {
   '1': 'RPColor',
   '2': [
-    {'1': 'red', '3': 1, '4': 1, '5': 9, '10': 'red'},
-    {'1': 'green', '3': 2, '4': 1, '5': 9, '10': 'green'},
-    {'1': 'blue', '3': 3, '4': 1, '5': 9, '10': 'blue'},
+    {'1': 'red', '3': 1, '4': 1, '5': 5, '10': 'red'},
+    {'1': 'green', '3': 2, '4': 1, '5': 5, '10': 'green'},
+    {'1': 'blue', '3': 3, '4': 1, '5': 5, '10': 'blue'},
   ],
 };
 
 /// Descriptor for `RPColor`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List rPColorDescriptor = $convert.base64Decode(
-    'CgdSUENvbG9yEhAKA3JlZBgBIAEoCVIDcmVkEhQKBWdyZWVuGAIgASgJUgVncmVlbhISCgRibH'
-    'VlGAMgASgJUgRibHVl');
+    'CgdSUENvbG9yEhAKA3JlZBgBIAEoBVIDcmVkEhQKBWdyZWVuGAIgASgFUgVncmVlbhISCgRibH'
+    'VlGAMgASgFUgRibHVl');

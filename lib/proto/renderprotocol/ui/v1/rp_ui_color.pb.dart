@@ -18,9 +18,9 @@ export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class RPColor extends $pb.GeneratedMessage {
   factory RPColor({
-    $core.String? red,
-    $core.String? green,
-    $core.String? blue,
+    $core.int? red,
+    $core.int? green,
+    $core.int? blue,
   }) {
     final result = create();
     if (red != null) result.red = red;
@@ -43,9 +43,9 @@ class RPColor extends $pb.GeneratedMessage {
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'proto.renderprotocol.ui.v1'),
       createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'red')
-    ..aOS(2, _omitFieldNames ? '' : 'green')
-    ..aOS(3, _omitFieldNames ? '' : 'blue')
+    ..aI(1, _omitFieldNames ? '' : 'red')
+    ..aI(2, _omitFieldNames ? '' : 'green')
+    ..aI(3, _omitFieldNames ? '' : 'blue')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -67,27 +67,27 @@ class RPColor extends $pb.GeneratedMessage {
   static RPColor? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get red => $_getSZ(0);
+  $core.int get red => $_getIZ(0);
   @$pb.TagNumber(1)
-  set red($core.String value) => $_setString(0, value);
+  set red($core.int value) => $_setSignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasRed() => $_has(0);
   @$pb.TagNumber(1)
   void clearRed() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get green => $_getSZ(1);
+  $core.int get green => $_getIZ(1);
   @$pb.TagNumber(2)
-  set green($core.String value) => $_setString(1, value);
+  set green($core.int value) => $_setSignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasGreen() => $_has(1);
   @$pb.TagNumber(2)
   void clearGreen() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get blue => $_getSZ(2);
+  $core.int get blue => $_getIZ(2);
   @$pb.TagNumber(3)
-  set blue($core.String value) => $_setString(2, value);
+  set blue($core.int value) => $_setSignedInt32(2, value);
   @$pb.TagNumber(3)
   $core.bool hasBlue() => $_has(2);
   @$pb.TagNumber(3)
