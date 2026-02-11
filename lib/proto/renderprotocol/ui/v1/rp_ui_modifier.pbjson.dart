@@ -15,45 +15,28 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use rPModifierDescriptor instead')
-const RPModifier$json = {
-  '1': 'RPModifier',
+@$core.Deprecated('Use rPPaddingDescriptor instead')
+const RPPadding$json = {
+  '1': 'RPPadding',
   '2': [
+    {'1': 'all', '3': 1, '4': 1, '5': 2, '9': 0, '10': 'all'},
     {
-      '1': 'border',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.proto.renderprotocol.ui.v1.RPBorder',
-      '9': 0,
-      '10': 'border'
-    },
-    {
-      '1': 'padding',
+      '1': 'symmetric',
       '3': 2,
       '4': 1,
       '5': 11,
-      '6': '.proto.renderprotocol.ui.v1.RPPadding',
+      '6': '.proto.renderprotocol.ui.v1.RPSymmetricPadding',
       '9': 0,
-      '10': 'padding'
+      '10': 'symmetric'
     },
     {
-      '1': 'background_color',
+      '1': 'explicit',
       '3': 3,
       '4': 1,
       '5': 11,
-      '6': '.proto.renderprotocol.ui.v1.RPColor',
+      '6': '.proto.renderprotocol.ui.v1.RPExplicitPadding',
       '9': 0,
-      '10': 'backgroundColor'
-    },
-    {
-      '1': 'clip',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.proto.renderprotocol.ui.v1.RPClip',
-      '9': 0,
-      '10': 'clip'
+      '10': 'explicit'
     },
   ],
   '8': [
@@ -61,18 +44,30 @@ const RPModifier$json = {
   ],
 };
 
-/// Descriptor for `RPModifier`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rPModifierDescriptor = $convert.base64Decode(
-    'CgpSUE1vZGlmaWVyEj4KBmJvcmRlchgBIAEoCzIkLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLn'
-    'YxLlJQQm9yZGVySABSBmJvcmRlchJBCgdwYWRkaW5nGAIgASgLMiUucHJvdG8ucmVuZGVycHJv'
-    'dG9jb2wudWkudjEuUlBQYWRkaW5nSABSB3BhZGRpbmcSUAoQYmFja2dyb3VuZF9jb2xvchgDIA'
-    'EoCzIjLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQQ29sb3JIAFIPYmFja2dyb3VuZENv'
-    'bG9yEjgKBGNsaXAYBCABKAsyIi5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUENsaXBIAF'
-    'IEY2xpcEIHCgV2YWx1ZQ==');
+/// Descriptor for `RPPadding`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rPPaddingDescriptor = $convert.base64Decode(
+    'CglSUFBhZGRpbmcSEgoDYWxsGAEgASgCSABSA2FsbBJOCglzeW1tZXRyaWMYAiABKAsyLi5wcm'
+    '90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUFN5bW1ldHJpY1BhZGRpbmdIAFIJc3ltbWV0cmlj'
+    'EksKCGV4cGxpY2l0GAMgASgLMi0ucHJvdG8ucmVuZGVycHJvdG9jb2wudWkudjEuUlBFeHBsaW'
+    'NpdFBhZGRpbmdIAFIIZXhwbGljaXRCBwoFdmFsdWU=');
 
-@$core.Deprecated('Use rPPaddingDescriptor instead')
-const RPPadding$json = {
-  '1': 'RPPadding',
+@$core.Deprecated('Use rPSymmetricPaddingDescriptor instead')
+const RPSymmetricPadding$json = {
+  '1': 'RPSymmetricPadding',
+  '2': [
+    {'1': 'vertical', '3': 1, '4': 1, '5': 2, '10': 'vertical'},
+    {'1': 'horizontal', '3': 2, '4': 1, '5': 2, '10': 'horizontal'},
+  ],
+};
+
+/// Descriptor for `RPSymmetricPadding`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rPSymmetricPaddingDescriptor = $convert.base64Decode(
+    'ChJSUFN5bW1ldHJpY1BhZGRpbmcSGgoIdmVydGljYWwYASABKAJSCHZlcnRpY2FsEh4KCmhvcm'
+    'l6b250YWwYAiABKAJSCmhvcml6b250YWw=');
+
+@$core.Deprecated('Use rPExplicitPaddingDescriptor instead')
+const RPExplicitPadding$json = {
+  '1': 'RPExplicitPadding',
   '2': [
     {'1': 'top', '3': 1, '4': 1, '5': 2, '10': 'top'},
     {'1': 'bottom', '3': 2, '4': 1, '5': 2, '10': 'bottom'},
@@ -81,10 +76,10 @@ const RPPadding$json = {
   ],
 };
 
-/// Descriptor for `RPPadding`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rPPaddingDescriptor = $convert.base64Decode(
-    'CglSUFBhZGRpbmcSEAoDdG9wGAEgASgCUgN0b3ASFgoGYm90dG9tGAIgASgCUgZib3R0b20SEg'
-    'oEbGVmdBgDIAEoAlIEbGVmdBIUCgVyaWdodBgEIAEoAlIFcmlnaHQ=');
+/// Descriptor for `RPExplicitPadding`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rPExplicitPaddingDescriptor = $convert.base64Decode(
+    'ChFSUEV4cGxpY2l0UGFkZGluZxIQCgN0b3AYASABKAJSA3RvcBIWCgZib3R0b20YAiABKAJSBm'
+    'JvdHRvbRISCgRsZWZ0GAMgASgCUgRsZWZ0EhQKBXJpZ2h0GAQgASgCUgVyaWdodA==');
 
 @$core.Deprecated('Use rPBorderDescriptor instead')
 const RPBorder$json = {

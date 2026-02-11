@@ -14,146 +14,22 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'rp_ui_clip.pb.dart' as $1;
 import 'rp_ui_color.pb.dart' as $0;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
-enum RPModifier_Value { border, padding, backgroundColor, clip, notSet }
-
-class RPModifier extends $pb.GeneratedMessage {
-  factory RPModifier({
-    RPBorder? border,
-    RPPadding? padding,
-    $0.RPColor? backgroundColor,
-    $1.RPClip? clip,
-  }) {
-    final result = create();
-    if (border != null) result.border = border;
-    if (padding != null) result.padding = padding;
-    if (backgroundColor != null) result.backgroundColor = backgroundColor;
-    if (clip != null) result.clip = clip;
-    return result;
-  }
-
-  RPModifier._();
-
-  factory RPModifier.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory RPModifier.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static const $core.Map<$core.int, RPModifier_Value> _RPModifier_ValueByTag = {
-    1: RPModifier_Value.border,
-    2: RPModifier_Value.padding,
-    3: RPModifier_Value.backgroundColor,
-    4: RPModifier_Value.clip,
-    0: RPModifier_Value.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RPModifier',
-      package: const $pb.PackageName(
-          _omitMessageNames ? '' : 'proto.renderprotocol.ui.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4])
-    ..aOM<RPBorder>(1, _omitFieldNames ? '' : 'border',
-        subBuilder: RPBorder.create)
-    ..aOM<RPPadding>(2, _omitFieldNames ? '' : 'padding',
-        subBuilder: RPPadding.create)
-    ..aOM<$0.RPColor>(3, _omitFieldNames ? '' : 'backgroundColor',
-        subBuilder: $0.RPColor.create)
-    ..aOM<$1.RPClip>(4, _omitFieldNames ? '' : 'clip',
-        subBuilder: $1.RPClip.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RPModifier clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RPModifier copyWith(void Function(RPModifier) updates) =>
-      super.copyWith((message) => updates(message as RPModifier)) as RPModifier;
-
-  @$core.override
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static RPModifier create() => RPModifier._();
-  @$core.override
-  RPModifier createEmptyInstance() => create();
-  @$core.pragma('dart2js:noInline')
-  static RPModifier getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RPModifier>(create);
-  static RPModifier? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  @$pb.TagNumber(2)
-  @$pb.TagNumber(3)
-  @$pb.TagNumber(4)
-  RPModifier_Value whichValue() => _RPModifier_ValueByTag[$_whichOneof(0)]!;
-  @$pb.TagNumber(1)
-  @$pb.TagNumber(2)
-  @$pb.TagNumber(3)
-  @$pb.TagNumber(4)
-  void clearValue() => $_clearField($_whichOneof(0));
-
-  @$pb.TagNumber(1)
-  RPBorder get border => $_getN(0);
-  @$pb.TagNumber(1)
-  set border(RPBorder value) => $_setField(1, value);
-  @$pb.TagNumber(1)
-  $core.bool hasBorder() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearBorder() => $_clearField(1);
-  @$pb.TagNumber(1)
-  RPBorder ensureBorder() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  RPPadding get padding => $_getN(1);
-  @$pb.TagNumber(2)
-  set padding(RPPadding value) => $_setField(2, value);
-  @$pb.TagNumber(2)
-  $core.bool hasPadding() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearPadding() => $_clearField(2);
-  @$pb.TagNumber(2)
-  RPPadding ensurePadding() => $_ensure(1);
-
-  @$pb.TagNumber(3)
-  $0.RPColor get backgroundColor => $_getN(2);
-  @$pb.TagNumber(3)
-  set backgroundColor($0.RPColor value) => $_setField(3, value);
-  @$pb.TagNumber(3)
-  $core.bool hasBackgroundColor() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearBackgroundColor() => $_clearField(3);
-  @$pb.TagNumber(3)
-  $0.RPColor ensureBackgroundColor() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $1.RPClip get clip => $_getN(3);
-  @$pb.TagNumber(4)
-  set clip($1.RPClip value) => $_setField(4, value);
-  @$pb.TagNumber(4)
-  $core.bool hasClip() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearClip() => $_clearField(4);
-  @$pb.TagNumber(4)
-  $1.RPClip ensureClip() => $_ensure(3);
-}
+enum RPPadding_Value { all, symmetric, explicit, notSet }
 
 class RPPadding extends $pb.GeneratedMessage {
   factory RPPadding({
-    $core.double? top,
-    $core.double? bottom,
-    $core.double? left,
-    $core.double? right,
+    $core.double? all,
+    RPSymmetricPadding? symmetric,
+    RPExplicitPadding? explicit,
   }) {
     final result = create();
-    if (top != null) result.top = top;
-    if (bottom != null) result.bottom = bottom;
-    if (left != null) result.left = left;
-    if (right != null) result.right = right;
+    if (all != null) result.all = all;
+    if (symmetric != null) result.symmetric = symmetric;
+    if (explicit != null) result.explicit = explicit;
     return result;
   }
 
@@ -166,15 +42,23 @@ class RPPadding extends $pb.GeneratedMessage {
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
+  static const $core.Map<$core.int, RPPadding_Value> _RPPadding_ValueByTag = {
+    1: RPPadding_Value.all,
+    2: RPPadding_Value.symmetric,
+    3: RPPadding_Value.explicit,
+    0: RPPadding_Value.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'RPPadding',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'proto.renderprotocol.ui.v1'),
       createEmptyInstance: create)
-    ..aD(1, _omitFieldNames ? '' : 'top', fieldType: $pb.PbFieldType.OF)
-    ..aD(2, _omitFieldNames ? '' : 'bottom', fieldType: $pb.PbFieldType.OF)
-    ..aD(3, _omitFieldNames ? '' : 'left', fieldType: $pb.PbFieldType.OF)
-    ..aD(4, _omitFieldNames ? '' : 'right', fieldType: $pb.PbFieldType.OF)
+    ..oo(0, [1, 2, 3])
+    ..aD(1, _omitFieldNames ? '' : 'all', fieldType: $pb.PbFieldType.OF)
+    ..aOM<RPSymmetricPadding>(2, _omitFieldNames ? '' : 'symmetric',
+        subBuilder: RPSymmetricPadding.create)
+    ..aOM<RPExplicitPadding>(3, _omitFieldNames ? '' : 'explicit',
+        subBuilder: RPExplicitPadding.create)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -194,6 +78,168 @@ class RPPadding extends $pb.GeneratedMessage {
   static RPPadding getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RPPadding>(create);
   static RPPadding? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  RPPadding_Value whichValue() => _RPPadding_ValueByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  void clearValue() => $_clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.double get all => $_getN(0);
+  @$pb.TagNumber(1)
+  set all($core.double value) => $_setFloat(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasAll() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAll() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  RPSymmetricPadding get symmetric => $_getN(1);
+  @$pb.TagNumber(2)
+  set symmetric(RPSymmetricPadding value) => $_setField(2, value);
+  @$pb.TagNumber(2)
+  $core.bool hasSymmetric() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSymmetric() => $_clearField(2);
+  @$pb.TagNumber(2)
+  RPSymmetricPadding ensureSymmetric() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  RPExplicitPadding get explicit => $_getN(2);
+  @$pb.TagNumber(3)
+  set explicit(RPExplicitPadding value) => $_setField(3, value);
+  @$pb.TagNumber(3)
+  $core.bool hasExplicit() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearExplicit() => $_clearField(3);
+  @$pb.TagNumber(3)
+  RPExplicitPadding ensureExplicit() => $_ensure(2);
+}
+
+class RPSymmetricPadding extends $pb.GeneratedMessage {
+  factory RPSymmetricPadding({
+    $core.double? vertical,
+    $core.double? horizontal,
+  }) {
+    final result = create();
+    if (vertical != null) result.vertical = vertical;
+    if (horizontal != null) result.horizontal = horizontal;
+    return result;
+  }
+
+  RPSymmetricPadding._();
+
+  factory RPSymmetricPadding.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RPSymmetricPadding.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RPSymmetricPadding',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'proto.renderprotocol.ui.v1'),
+      createEmptyInstance: create)
+    ..aD(1, _omitFieldNames ? '' : 'vertical', fieldType: $pb.PbFieldType.OF)
+    ..aD(2, _omitFieldNames ? '' : 'horizontal', fieldType: $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RPSymmetricPadding clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RPSymmetricPadding copyWith(void Function(RPSymmetricPadding) updates) =>
+      super.copyWith((message) => updates(message as RPSymmetricPadding))
+          as RPSymmetricPadding;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RPSymmetricPadding create() => RPSymmetricPadding._();
+  @$core.override
+  RPSymmetricPadding createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static RPSymmetricPadding getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RPSymmetricPadding>(create);
+  static RPSymmetricPadding? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get vertical => $_getN(0);
+  @$pb.TagNumber(1)
+  set vertical($core.double value) => $_setFloat(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasVertical() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearVertical() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get horizontal => $_getN(1);
+  @$pb.TagNumber(2)
+  set horizontal($core.double value) => $_setFloat(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasHorizontal() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearHorizontal() => $_clearField(2);
+}
+
+class RPExplicitPadding extends $pb.GeneratedMessage {
+  factory RPExplicitPadding({
+    $core.double? top,
+    $core.double? bottom,
+    $core.double? left,
+    $core.double? right,
+  }) {
+    final result = create();
+    if (top != null) result.top = top;
+    if (bottom != null) result.bottom = bottom;
+    if (left != null) result.left = left;
+    if (right != null) result.right = right;
+    return result;
+  }
+
+  RPExplicitPadding._();
+
+  factory RPExplicitPadding.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RPExplicitPadding.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RPExplicitPadding',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'proto.renderprotocol.ui.v1'),
+      createEmptyInstance: create)
+    ..aD(1, _omitFieldNames ? '' : 'top', fieldType: $pb.PbFieldType.OF)
+    ..aD(2, _omitFieldNames ? '' : 'bottom', fieldType: $pb.PbFieldType.OF)
+    ..aD(3, _omitFieldNames ? '' : 'left', fieldType: $pb.PbFieldType.OF)
+    ..aD(4, _omitFieldNames ? '' : 'right', fieldType: $pb.PbFieldType.OF)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RPExplicitPadding clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RPExplicitPadding copyWith(void Function(RPExplicitPadding) updates) =>
+      super.copyWith((message) => updates(message as RPExplicitPadding))
+          as RPExplicitPadding;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RPExplicitPadding create() => RPExplicitPadding._();
+  @$core.override
+  RPExplicitPadding createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static RPExplicitPadding getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RPExplicitPadding>(create);
+  static RPExplicitPadding? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.double get top => $_getN(0);

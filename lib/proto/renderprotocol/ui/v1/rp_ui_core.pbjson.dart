@@ -21,14 +21,6 @@ const RPWidget$json = {
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {
-      '1': 'modifiers',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.proto.renderprotocol.ui.v1.RPModifier',
-      '10': 'modifiers'
-    },
-    {
       '1': 'row',
       '3': 51,
       '4': 1,
@@ -56,6 +48,15 @@ const RPWidget$json = {
       '10': 'stack'
     },
     {
+      '1': 'container',
+      '3': 54,
+      '4': 1,
+      '5': 11,
+      '6': '.proto.renderprotocol.ui.v1.RPContainer',
+      '9': 0,
+      '10': 'container'
+    },
+    {
       '1': 'text',
       '3': 101,
       '4': 1,
@@ -81,14 +82,14 @@ const RPWidget$json = {
 
 /// Descriptor for `RPWidget`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List rPWidgetDescriptor = $convert.base64Decode(
-    'CghSUFdpZGdldBIOCgJpZBgBIAEoCVICaWQSRAoJbW9kaWZpZXJzGAIgAygLMiYucHJvdG8ucm'
-    'VuZGVycHJvdG9jb2wudWkudjEuUlBNb2RpZmllclIJbW9kaWZpZXJzEjUKA3JvdxgzIAEoCzIh'
-    'LnByb3RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQUm93SABSA3JvdxI+CgZjb2x1bW4YNCABKA'
-    'syJC5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUENvbHVtbkgAUgZjb2x1bW4SOwoFc3Rh'
-    'Y2sYNSABKAsyIy5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUFN0YWNrSABSBXN0YWNrEj'
-    'gKBHRleHQYZSABKAsyIi5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUFRleHRIAFIEdGV4'
-    'dBI7CgVpbWFnZRhmIAEoCzIjLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQSW1hZ2VIAF'
-    'IFaW1hZ2VCCQoHY29udGVudA==');
+    'CghSUFdpZGdldBIOCgJpZBgBIAEoCVICaWQSNQoDcm93GDMgASgLMiEucHJvdG8ucmVuZGVycH'
+    'JvdG9jb2wudWkudjEuUlBSb3dIAFIDcm93Ej4KBmNvbHVtbhg0IAEoCzIkLnByb3RvLnJlbmRl'
+    'cnByb3RvY29sLnVpLnYxLlJQQ29sdW1uSABSBmNvbHVtbhI7CgVzdGFjaxg1IAEoCzIjLnByb3'
+    'RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQU3RhY2tIAFIFc3RhY2sSRwoJY29udGFpbmVyGDYg'
+    'ASgLMicucHJvdG8ucmVuZGVycHJvdG9jb2wudWkudjEuUlBDb250YWluZXJIAFIJY29udGFpbm'
+    'VyEjgKBHRleHQYZSABKAsyIi5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUFRleHRIAFIE'
+    'dGV4dBI7CgVpbWFnZRhmIAEoCzIjLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQSW1hZ2'
+    'VIAFIFaW1hZ2VCCQoHY29udGVudA==');
 
 @$core.Deprecated('Use rPRowDescriptor instead')
 const RPRow$json = {
@@ -171,3 +172,67 @@ const RPStack$json = {
 final $typed_data.Uint8List rPStackDescriptor = $convert.base64Decode(
     'CgdSUFN0YWNrEkAKCGNoaWxkcmVuGAEgAygLMiQucHJvdG8ucmVuZGVycHJvdG9jb2wudWkudj'
     'EuUlBXaWRnZXRSCGNoaWxkcmVu');
+
+@$core.Deprecated('Use rPContainerDescriptor instead')
+const RPContainer$json = {
+  '1': 'RPContainer',
+  '2': [
+    {
+      '1': 'child',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.proto.renderprotocol.ui.v1.RPWidget',
+      '10': 'child'
+    },
+    {
+      '1': 'border',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.proto.renderprotocol.ui.v1.RPBorder',
+      '9': 0,
+      '10': 'border'
+    },
+    {
+      '1': 'padding',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.proto.renderprotocol.ui.v1.RPPadding',
+      '9': 0,
+      '10': 'padding'
+    },
+    {
+      '1': 'background_color',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.proto.renderprotocol.ui.v1.RPColor',
+      '9': 0,
+      '10': 'backgroundColor'
+    },
+    {
+      '1': 'clip',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.proto.renderprotocol.ui.v1.RPClip',
+      '9': 0,
+      '10': 'clip'
+    },
+  ],
+  '8': [
+    {'1': 'value'},
+  ],
+};
+
+/// Descriptor for `RPContainer`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rPContainerDescriptor = $convert.base64Decode(
+    'CgtSUENvbnRhaW5lchI6CgVjaGlsZBgBIAEoCzIkLnByb3RvLnJlbmRlcnByb3RvY29sLnVpLn'
+    'YxLlJQV2lkZ2V0UgVjaGlsZBI+CgZib3JkZXIYCyABKAsyJC5wcm90by5yZW5kZXJwcm90b2Nv'
+    'bC51aS52MS5SUEJvcmRlckgAUgZib3JkZXISQQoHcGFkZGluZxgMIAEoCzIlLnByb3RvLnJlbm'
+    'RlcnByb3RvY29sLnVpLnYxLlJQUGFkZGluZ0gAUgdwYWRkaW5nElAKEGJhY2tncm91bmRfY29s'
+    'b3IYDSABKAsyIy5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUENvbG9ySABSD2JhY2tncm'
+    '91bmRDb2xvchI4CgRjbGlwGA4gASgLMiIucHJvdG8ucmVuZGVycHJvdG9jb2wudWkudjEuUlBD'
+    'bGlwSABSBGNsaXBCBwoFdmFsdWU=');
