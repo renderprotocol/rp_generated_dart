@@ -1,6 +1,6 @@
 // This is a generated file - do not edit.
 //
-// Generated from proto/renderprotocol/ui/v1/rp_ui_modifier.proto.
+// Generated from proto/renderprotocol/ui/v1/rp_ui_action.proto.
 
 // @dart = 3.3
 
