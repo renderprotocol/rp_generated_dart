@@ -34,7 +34,7 @@ enum RPWidget_Content {
   row,
   column,
   stack,
-  scrollView,
+  scrollable,
   lazyList,
   lazyGrid,
   wrap,
@@ -77,7 +77,7 @@ class RPWidget extends $pb.GeneratedMessage {
     RPRow? row,
     RPColumn? column,
     RPStack? stack,
-    RPScrollable? scrollView,
+    RPScrollable? scrollable,
     RPLazyList? lazyList,
     RPLazyGrid? lazyGrid,
     RPWrap? wrap,
@@ -117,7 +117,7 @@ class RPWidget extends $pb.GeneratedMessage {
     if (row != null) result.row = row;
     if (column != null) result.column = column;
     if (stack != null) result.stack = stack;
-    if (scrollView != null) result.scrollView = scrollView;
+    if (scrollable != null) result.scrollable = scrollable;
     if (lazyList != null) result.lazyList = lazyList;
     if (lazyGrid != null) result.lazyGrid = lazyGrid;
     if (wrap != null) result.wrap = wrap;
@@ -167,7 +167,7 @@ class RPWidget extends $pb.GeneratedMessage {
     51: RPWidget_Content.row,
     52: RPWidget_Content.column,
     53: RPWidget_Content.stack,
-    58: RPWidget_Content.scrollView,
+    58: RPWidget_Content.scrollable,
     59: RPWidget_Content.lazyList,
     60: RPWidget_Content.lazyGrid,
     61: RPWidget_Content.wrap,
@@ -253,7 +253,7 @@ class RPWidget extends $pb.GeneratedMessage {
         subBuilder: RPColumn.create)
     ..aOM<RPStack>(53, _omitFieldNames ? '' : 'stack',
         subBuilder: RPStack.create)
-    ..aOM<RPScrollable>(58, _omitFieldNames ? '' : 'scrollView',
+    ..aOM<RPScrollable>(58, _omitFieldNames ? '' : 'scrollable',
         subBuilder: RPScrollable.create)
     ..aOM<RPLazyList>(59, _omitFieldNames ? '' : 'lazyList',
         subBuilder: RPLazyList.create)
@@ -460,15 +460,15 @@ class RPWidget extends $pb.GeneratedMessage {
   RPStack ensureStack() => $_ensure(3);
 
   @$pb.TagNumber(58)
-  RPScrollable get scrollView => $_getN(4);
+  RPScrollable get scrollable => $_getN(4);
   @$pb.TagNumber(58)
-  set scrollView(RPScrollable value) => $_setField(58, value);
+  set scrollable(RPScrollable value) => $_setField(58, value);
   @$pb.TagNumber(58)
-  $core.bool hasScrollView() => $_has(4);
+  $core.bool hasScrollable() => $_has(4);
   @$pb.TagNumber(58)
-  void clearScrollView() => $_clearField(58);
+  void clearScrollable() => $_clearField(58);
   @$pb.TagNumber(58)
-  RPScrollable ensureScrollView() => $_ensure(4);
+  RPScrollable ensureScrollable() => $_ensure(4);
 
   @$pb.TagNumber(59)
   RPLazyList get lazyList => $_getN(5);
