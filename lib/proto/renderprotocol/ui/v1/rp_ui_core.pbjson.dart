@@ -52,7 +52,7 @@ const RPWidget$json = {
       '3': 58,
       '4': 1,
       '5': 11,
-      '6': '.proto.renderprotocol.ui.v1.RPScrollView',
+      '6': '.proto.renderprotocol.ui.v1.RPScrollable',
       '9': 0,
       '10': 'scrollView'
     },
@@ -365,7 +365,7 @@ final $typed_data.Uint8List rPWidgetDescriptor = $convert.base64Decode(
     'JvdG9jb2wudWkudjEuUlBSb3dIAFIDcm93Ej4KBmNvbHVtbhg0IAEoCzIkLnByb3RvLnJlbmRl'
     'cnByb3RvY29sLnVpLnYxLlJQQ29sdW1uSABSBmNvbHVtbhI7CgVzdGFjaxg1IAEoCzIjLnByb3'
     'RvLnJlbmRlcnByb3RvY29sLnVpLnYxLlJQU3RhY2tIAFIFc3RhY2sSSwoLc2Nyb2xsX3ZpZXcY'
-    'OiABKAsyKC5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUFNjcm9sbFZpZXdIAFIKc2Nyb2'
+    'OiABKAsyKC5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5SUFNjcm9sbGFibGVIAFIKc2Nyb2'
     'xsVmlldxJFCglsYXp5X2xpc3QYOyABKAsyJi5wcm90by5yZW5kZXJwcm90b2NvbC51aS52MS5S'
     'UExhenlMaXN0SABSCGxhenlMaXN0EkUKCWxhenlfZ3JpZBg8IAEoCzImLnByb3RvLnJlbmRlcn'
     'Byb3RvY29sLnVpLnYxLlJQTGF6eUdyaWRIAFIIbGF6eUdyaWQSOAoEd3JhcBg9IAEoCzIiLnBy'
@@ -500,9 +500,9 @@ final $typed_data.Uint8List rPStackDescriptor = $convert.base64Decode(
     'EuUlBXaWRnZXRSCGNoaWxkcmVuEkUKCWFsaWdubWVudBgCIAEoDjInLnByb3RvLnJlbmRlcnBy'
     'b3RvY29sLnVpLnYxLlJQQWxpZ25tZW50UglhbGlnbm1lbnQ=');
 
-@$core.Deprecated('Use rPScrollViewDescriptor instead')
-const RPScrollView$json = {
-  '1': 'RPScrollView',
+@$core.Deprecated('Use rPScrollableDescriptor instead')
+const RPScrollable$json = {
+  '1': 'RPScrollable',
   '2': [
     {
       '1': 'child',
@@ -524,9 +524,9 @@ const RPScrollView$json = {
   ],
 };
 
-/// Descriptor for `RPScrollView`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rPScrollViewDescriptor = $convert.base64Decode(
-    'CgxSUFNjcm9sbFZpZXcSOgoFY2hpbGQYASABKAsyJC5wcm90by5yZW5kZXJwcm90b2NvbC51aS'
+/// Descriptor for `RPScrollable`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rPScrollableDescriptor = $convert.base64Decode(
+    'CgxSUFNjcm9sbGFibGUSOgoFY2hpbGQYASABKAsyJC5wcm90by5yZW5kZXJwcm90b2NvbC51aS'
     '52MS5SUFdpZGdldFIFY2hpbGQSNgoEYXhpcxgCIAEoDjIiLnByb3RvLnJlbmRlcnByb3RvY29s'
     'LnVpLnYxLlJQQXhpc1IEYXhpcxIpChBzaG93c19pbmRpY2F0b3JzGAMgASgIUg9zaG93c0luZG'
     'ljYXRvcnM=');

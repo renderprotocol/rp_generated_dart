@@ -77,7 +77,7 @@ class RPWidget extends $pb.GeneratedMessage {
     RPRow? row,
     RPColumn? column,
     RPStack? stack,
-    RPScrollView? scrollView,
+    RPScrollable? scrollView,
     RPLazyList? lazyList,
     RPLazyGrid? lazyGrid,
     RPWrap? wrap,
@@ -253,8 +253,8 @@ class RPWidget extends $pb.GeneratedMessage {
         subBuilder: RPColumn.create)
     ..aOM<RPStack>(53, _omitFieldNames ? '' : 'stack',
         subBuilder: RPStack.create)
-    ..aOM<RPScrollView>(58, _omitFieldNames ? '' : 'scrollView',
-        subBuilder: RPScrollView.create)
+    ..aOM<RPScrollable>(58, _omitFieldNames ? '' : 'scrollView',
+        subBuilder: RPScrollable.create)
     ..aOM<RPLazyList>(59, _omitFieldNames ? '' : 'lazyList',
         subBuilder: RPLazyList.create)
     ..aOM<RPLazyGrid>(60, _omitFieldNames ? '' : 'lazyGrid',
@@ -460,15 +460,15 @@ class RPWidget extends $pb.GeneratedMessage {
   RPStack ensureStack() => $_ensure(3);
 
   @$pb.TagNumber(58)
-  RPScrollView get scrollView => $_getN(4);
+  RPScrollable get scrollView => $_getN(4);
   @$pb.TagNumber(58)
-  set scrollView(RPScrollView value) => $_setField(58, value);
+  set scrollView(RPScrollable value) => $_setField(58, value);
   @$pb.TagNumber(58)
   $core.bool hasScrollView() => $_has(4);
   @$pb.TagNumber(58)
   void clearScrollView() => $_clearField(58);
   @$pb.TagNumber(58)
-  RPScrollView ensureScrollView() => $_ensure(4);
+  RPScrollable ensureScrollView() => $_ensure(4);
 
   @$pb.TagNumber(59)
   RPLazyList get lazyList => $_getN(5);
@@ -1049,8 +1049,8 @@ class RPStack extends $pb.GeneratedMessage {
   void clearAlignment() => $_clearField(2);
 }
 
-class RPScrollView extends $pb.GeneratedMessage {
-  factory RPScrollView({
+class RPScrollable extends $pb.GeneratedMessage {
+  factory RPScrollable({
     RPWidget? child,
     $9.RPAxis? axis,
     $core.bool? showsIndicators,
@@ -1062,17 +1062,17 @@ class RPScrollView extends $pb.GeneratedMessage {
     return result;
   }
 
-  RPScrollView._();
+  RPScrollable._();
 
-  factory RPScrollView.fromBuffer($core.List<$core.int> data,
+  factory RPScrollable.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(data, registry);
-  factory RPScrollView.fromJson($core.String json,
+  factory RPScrollable.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RPScrollView',
+      _omitMessageNames ? '' : 'RPScrollable',
       package: const $pb.PackageName(
           _omitMessageNames ? '' : 'proto.renderprotocol.ui.v1'),
       createEmptyInstance: create)
@@ -1084,23 +1084,23 @@ class RPScrollView extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RPScrollView clone() => deepCopy();
+  RPScrollable clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RPScrollView copyWith(void Function(RPScrollView) updates) =>
-      super.copyWith((message) => updates(message as RPScrollView))
-          as RPScrollView;
+  RPScrollable copyWith(void Function(RPScrollable) updates) =>
+      super.copyWith((message) => updates(message as RPScrollable))
+          as RPScrollable;
 
   @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RPScrollView create() => RPScrollView._();
+  static RPScrollable create() => RPScrollable._();
   @$core.override
-  RPScrollView createEmptyInstance() => create();
+  RPScrollable createEmptyInstance() => create();
   @$core.pragma('dart2js:noInline')
-  static RPScrollView getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RPScrollView>(create);
-  static RPScrollView? _defaultInstance;
+  static RPScrollable getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RPScrollable>(create);
+  static RPScrollable? _defaultInstance;
 
   @$pb.TagNumber(1)
   RPWidget get child => $_getN(0);
