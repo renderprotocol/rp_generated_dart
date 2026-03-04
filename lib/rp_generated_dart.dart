@@ -1,10 +1,18 @@
 /// Render Protocol Generated Exports
 library rp_generated_dart;
 
+export 'proto/renderprotocol/api/v1/rp_api_event_service.pb.dart';
+export 'proto/renderprotocol/api/v1/rp_api_event_service.pbenum.dart';
+export 'proto/renderprotocol/api/v1/rp_api_event_service.pbgrpc.dart';
+export 'proto/renderprotocol/api/v1/rp_api_event_service.pbjson.dart';
 export 'proto/renderprotocol/api/v1/rp_api_handshake_service.pb.dart';
 export 'proto/renderprotocol/api/v1/rp_api_handshake_service.pbenum.dart';
 export 'proto/renderprotocol/api/v1/rp_api_handshake_service.pbgrpc.dart';
 export 'proto/renderprotocol/api/v1/rp_api_handshake_service.pbjson.dart';
+export 'proto/renderprotocol/api/v1/rp_api_health_service.pb.dart';
+export 'proto/renderprotocol/api/v1/rp_api_health_service.pbenum.dart';
+export 'proto/renderprotocol/api/v1/rp_api_health_service.pbgrpc.dart';
+export 'proto/renderprotocol/api/v1/rp_api_health_service.pbjson.dart';
 export 'proto/renderprotocol/api/v1/rp_api_metadata.pb.dart';
 export 'proto/renderprotocol/api/v1/rp_api_metadata.pbenum.dart';
 export 'proto/renderprotocol/api/v1/rp_api_metadata.pbjson.dart';
@@ -15,6 +23,9 @@ export 'proto/renderprotocol/api/v1/rp_api_render_service.pb.dart';
 export 'proto/renderprotocol/api/v1/rp_api_render_service.pbenum.dart';
 export 'proto/renderprotocol/api/v1/rp_api_render_service.pbgrpc.dart';
 export 'proto/renderprotocol/api/v1/rp_api_render_service.pbjson.dart';
+export 'proto/renderprotocol/api/v1/rp_api_status.pb.dart';
+export 'proto/renderprotocol/api/v1/rp_api_status.pbenum.dart';
+export 'proto/renderprotocol/api/v1/rp_api_status.pbjson.dart';
 export 'proto/renderprotocol/ui/v1/rp_ui_action.pb.dart';
 export 'proto/renderprotocol/ui/v1/rp_ui_action.pbenum.dart';
 export 'proto/renderprotocol/ui/v1/rp_ui_action.pbjson.dart';

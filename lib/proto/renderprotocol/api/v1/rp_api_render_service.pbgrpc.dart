@@ -39,6 +39,22 @@ class RPRenderServiceClient extends $grpc.Client {
     return $createUnaryCall(_$rPFetchRenderTree, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.RPFetchComponentResponse> rPFetchComponent(
+    $0.RPFetchComponentRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createUnaryCall(_$rPFetchComponent, request, options: options);
+  }
+
+  $grpc.ResponseStream<$0.RPSubscribeRenderTreeResponse> rPSubscribeRenderTree(
+    $0.RPSubscribeRenderTreeRequest request, {
+    $grpc.CallOptions? options,
+  }) {
+    return $createStreamingCall(
+        _$rPSubscribeRenderTree, $async.Stream.fromIterable([request]),
+        options: options);
+  }
+
   // method descriptors
 
   static final _$rPFetchRenderTree = $grpc.ClientMethod<
@@ -46,6 +62,16 @@ class RPRenderServiceClient extends $grpc.Client {
       '/proto.renderprotocol.api.v1.RPRenderService/RPFetchRenderTree',
       ($0.RPFetchRenderTreeRequest value) => value.writeToBuffer(),
       $0.RPFetchRenderTreeResponse.fromBuffer);
+  static final _$rPFetchComponent = $grpc.ClientMethod<
+          $0.RPFetchComponentRequest, $0.RPFetchComponentResponse>(
+      '/proto.renderprotocol.api.v1.RPRenderService/RPFetchComponent',
+      ($0.RPFetchComponentRequest value) => value.writeToBuffer(),
+      $0.RPFetchComponentResponse.fromBuffer);
+  static final _$rPSubscribeRenderTree = $grpc.ClientMethod<
+          $0.RPSubscribeRenderTreeRequest, $0.RPSubscribeRenderTreeResponse>(
+      '/proto.renderprotocol.api.v1.RPRenderService/RPSubscribeRenderTree',
+      ($0.RPSubscribeRenderTreeRequest value) => value.writeToBuffer(),
+      $0.RPSubscribeRenderTreeResponse.fromBuffer);
 }
 
 @$pb.GrpcServiceName('proto.renderprotocol.api.v1.RPRenderService')
@@ -62,6 +88,24 @@ abstract class RPRenderServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.RPFetchRenderTreeRequest.fromBuffer(value),
         ($0.RPFetchRenderTreeResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RPFetchComponentRequest,
+            $0.RPFetchComponentResponse>(
+        'RPFetchComponent',
+        rPFetchComponent_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.RPFetchComponentRequest.fromBuffer(value),
+        ($0.RPFetchComponentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.RPSubscribeRenderTreeRequest,
+            $0.RPSubscribeRenderTreeResponse>(
+        'RPSubscribeRenderTree',
+        rPSubscribeRenderTree_Pre,
+        false,
+        true,
+        ($core.List<$core.int> value) =>
+            $0.RPSubscribeRenderTreeRequest.fromBuffer(value),
+        ($0.RPSubscribeRenderTreeResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.RPFetchRenderTreeResponse> rPFetchRenderTree_Pre(
@@ -72,4 +116,22 @@ abstract class RPRenderServiceBase extends $grpc.Service {
 
   $async.Future<$0.RPFetchRenderTreeResponse> rPFetchRenderTree(
       $grpc.ServiceCall call, $0.RPFetchRenderTreeRequest request);
+
+  $async.Future<$0.RPFetchComponentResponse> rPFetchComponent_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.RPFetchComponentRequest> $request) async {
+    return rPFetchComponent($call, await $request);
+  }
+
+  $async.Future<$0.RPFetchComponentResponse> rPFetchComponent(
+      $grpc.ServiceCall call, $0.RPFetchComponentRequest request);
+
+  $async.Stream<$0.RPSubscribeRenderTreeResponse> rPSubscribeRenderTree_Pre(
+      $grpc.ServiceCall $call,
+      $async.Future<$0.RPSubscribeRenderTreeRequest> $request) async* {
+    yield* rPSubscribeRenderTree($call, await $request);
+  }
+
+  $async.Stream<$0.RPSubscribeRenderTreeResponse> rPSubscribeRenderTree(
+      $grpc.ServiceCall call, $0.RPSubscribeRenderTreeRequest request);
 }

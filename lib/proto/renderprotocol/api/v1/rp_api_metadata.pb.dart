@@ -23,11 +23,15 @@ class RPAppMetadata extends $pb.GeneratedMessage {
     $core.String? bundleId,
     $core.String? appVersion,
     $0.RPPlatform? platform,
+    $core.String? locale,
+    $core.String? sdkVersion,
   }) {
     final result = create();
     if (bundleId != null) result.bundleId = bundleId;
     if (appVersion != null) result.appVersion = appVersion;
     if (platform != null) result.platform = platform;
+    if (locale != null) result.locale = locale;
+    if (sdkVersion != null) result.sdkVersion = sdkVersion;
     return result;
   }
 
@@ -49,6 +53,8 @@ class RPAppMetadata extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'appVersion')
     ..aE<$0.RPPlatform>(3, _omitFieldNames ? '' : 'platform',
         enumValues: $0.RPPlatform.values)
+    ..aOS(4, _omitFieldNames ? '' : 'locale')
+    ..aOS(5, _omitFieldNames ? '' : 'sdkVersion')
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -96,6 +102,24 @@ class RPAppMetadata extends $pb.GeneratedMessage {
   $core.bool hasPlatform() => $_has(2);
   @$pb.TagNumber(3)
   void clearPlatform() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get locale => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set locale($core.String value) => $_setString(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasLocale() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearLocale() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get sdkVersion => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set sdkVersion($core.String value) => $_setString(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasSdkVersion() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSdkVersion() => $_clearField(5);
 }
 
 class RPDeviceMetadata extends $pb.GeneratedMessage {
@@ -103,11 +127,17 @@ class RPDeviceMetadata extends $pb.GeneratedMessage {
     $core.String? deviceModel,
     $core.String? osVersion,
     $0.RPPlatform? platform,
+    $core.double? screenWidth,
+    $core.double? screenHeight,
+    $core.double? screenDensity,
   }) {
     final result = create();
     if (deviceModel != null) result.deviceModel = deviceModel;
     if (osVersion != null) result.osVersion = osVersion;
     if (platform != null) result.platform = platform;
+    if (screenWidth != null) result.screenWidth = screenWidth;
+    if (screenHeight != null) result.screenHeight = screenHeight;
+    if (screenDensity != null) result.screenDensity = screenDensity;
     return result;
   }
 
@@ -129,6 +159,11 @@ class RPDeviceMetadata extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'osVersion')
     ..aE<$0.RPPlatform>(3, _omitFieldNames ? '' : 'platform',
         enumValues: $0.RPPlatform.values)
+    ..aD(4, _omitFieldNames ? '' : 'screenWidth', fieldType: $pb.PbFieldType.OF)
+    ..aD(5, _omitFieldNames ? '' : 'screenHeight',
+        fieldType: $pb.PbFieldType.OF)
+    ..aD(6, _omitFieldNames ? '' : 'screenDensity',
+        fieldType: $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
@@ -176,6 +211,33 @@ class RPDeviceMetadata extends $pb.GeneratedMessage {
   $core.bool hasPlatform() => $_has(2);
   @$pb.TagNumber(3)
   void clearPlatform() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.double get screenWidth => $_getN(3);
+  @$pb.TagNumber(4)
+  set screenWidth($core.double value) => $_setFloat(3, value);
+  @$pb.TagNumber(4)
+  $core.bool hasScreenWidth() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearScreenWidth() => $_clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.double get screenHeight => $_getN(4);
+  @$pb.TagNumber(5)
+  set screenHeight($core.double value) => $_setFloat(4, value);
+  @$pb.TagNumber(5)
+  $core.bool hasScreenHeight() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearScreenHeight() => $_clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.double get screenDensity => $_getN(5);
+  @$pb.TagNumber(6)
+  set screenDensity($core.double value) => $_setFloat(5, value);
+  @$pb.TagNumber(6)
+  $core.bool hasScreenDensity() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearScreenDensity() => $_clearField(6);
 }
 
 class RPApiMetadata extends $pb.GeneratedMessage {
@@ -249,6 +311,85 @@ class RPApiMetadata extends $pb.GeneratedMessage {
   void clearDeviceMetadata() => $_clearField(2);
   @$pb.TagNumber(2)
   RPDeviceMetadata ensureDeviceMetadata() => $_ensure(1);
+}
+
+class RPSessionContext extends $pb.GeneratedMessage {
+  factory RPSessionContext({
+    $core.String? sessionToken,
+    $core.String? traceId,
+    $core.String? localeOverride,
+  }) {
+    final result = create();
+    if (sessionToken != null) result.sessionToken = sessionToken;
+    if (traceId != null) result.traceId = traceId;
+    if (localeOverride != null) result.localeOverride = localeOverride;
+    return result;
+  }
+
+  RPSessionContext._();
+
+  factory RPSessionContext.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory RPSessionContext.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RPSessionContext',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'proto.renderprotocol.api.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sessionToken')
+    ..aOS(2, _omitFieldNames ? '' : 'traceId')
+    ..aOS(3, _omitFieldNames ? '' : 'localeOverride')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RPSessionContext clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  RPSessionContext copyWith(void Function(RPSessionContext) updates) =>
+      super.copyWith((message) => updates(message as RPSessionContext))
+          as RPSessionContext;
+
+  @$core.override
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static RPSessionContext create() => RPSessionContext._();
+  @$core.override
+  RPSessionContext createEmptyInstance() => create();
+  @$core.pragma('dart2js:noInline')
+  static RPSessionContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RPSessionContext>(create);
+  static RPSessionContext? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get sessionToken => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set sessionToken($core.String value) => $_setString(0, value);
+  @$pb.TagNumber(1)
+  $core.bool hasSessionToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSessionToken() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get traceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set traceId($core.String value) => $_setString(1, value);
+  @$pb.TagNumber(2)
+  $core.bool hasTraceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTraceId() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get localeOverride => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set localeOverride($core.String value) => $_setString(2, value);
+  @$pb.TagNumber(3)
+  $core.bool hasLocaleOverride() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearLocaleOverride() => $_clearField(3);
 }
 
 const $core.bool _omitFieldNames =

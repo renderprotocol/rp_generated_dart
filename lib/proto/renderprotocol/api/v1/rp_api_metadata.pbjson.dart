@@ -29,6 +29,8 @@ const RPAppMetadata$json = {
       '6': '.proto.renderprotocol.api.v1.RPPlatform',
       '10': 'platform'
     },
+    {'1': 'locale', '3': 4, '4': 1, '5': 9, '10': 'locale'},
+    {'1': 'sdk_version', '3': 5, '4': 1, '5': 9, '10': 'sdkVersion'},
   ],
 };
 
@@ -36,7 +38,8 @@ const RPAppMetadata$json = {
 final $typed_data.Uint8List rPAppMetadataDescriptor = $convert.base64Decode(
     'Cg1SUEFwcE1ldGFkYXRhEhsKCWJ1bmRsZV9pZBgBIAEoCVIIYnVuZGxlSWQSHwoLYXBwX3Zlcn'
     'Npb24YAiABKAlSCmFwcFZlcnNpb24SQwoIcGxhdGZvcm0YAyABKA4yJy5wcm90by5yZW5kZXJw'
-    'cm90b2NvbC5hcGkudjEuUlBQbGF0Zm9ybVIIcGxhdGZvcm0=');
+    'cm90b2NvbC5hcGkudjEuUlBQbGF0Zm9ybVIIcGxhdGZvcm0SFgoGbG9jYWxlGAQgASgJUgZsb2'
+    'NhbGUSHwoLc2RrX3ZlcnNpb24YBSABKAlSCnNka1ZlcnNpb24=');
 
 @$core.Deprecated('Use rPDeviceMetadataDescriptor instead')
 const RPDeviceMetadata$json = {
@@ -52,6 +55,38 @@ const RPDeviceMetadata$json = {
       '6': '.proto.renderprotocol.api.v1.RPPlatform',
       '10': 'platform'
     },
+    {
+      '1': 'screen_width',
+      '3': 4,
+      '4': 1,
+      '5': 2,
+      '9': 0,
+      '10': 'screenWidth',
+      '17': true
+    },
+    {
+      '1': 'screen_height',
+      '3': 5,
+      '4': 1,
+      '5': 2,
+      '9': 1,
+      '10': 'screenHeight',
+      '17': true
+    },
+    {
+      '1': 'screen_density',
+      '3': 6,
+      '4': 1,
+      '5': 2,
+      '9': 2,
+      '10': 'screenDensity',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_screen_width'},
+    {'1': '_screen_height'},
+    {'1': '_screen_density'},
   ],
 };
 
@@ -59,7 +94,10 @@ const RPDeviceMetadata$json = {
 final $typed_data.Uint8List rPDeviceMetadataDescriptor = $convert.base64Decode(
     'ChBSUERldmljZU1ldGFkYXRhEiEKDGRldmljZV9tb2RlbBgBIAEoCVILZGV2aWNlTW9kZWwSHQ'
     'oKb3NfdmVyc2lvbhgCIAEoCVIJb3NWZXJzaW9uEkMKCHBsYXRmb3JtGAMgASgOMicucHJvdG8u'
-    'cmVuZGVycHJvdG9jb2wuYXBpLnYxLlJQUGxhdGZvcm1SCHBsYXRmb3Jt');
+    'cmVuZGVycHJvdG9jb2wuYXBpLnYxLlJQUGxhdGZvcm1SCHBsYXRmb3JtEiYKDHNjcmVlbl93aW'
+    'R0aBgEIAEoAkgAUgtzY3JlZW5XaWR0aIgBARIoCg1zY3JlZW5faGVpZ2h0GAUgASgCSAFSDHNj'
+    'cmVlbkhlaWdodIgBARIqCg5zY3JlZW5fZGVuc2l0eRgGIAEoAkgCUg1zY3JlZW5EZW5zaXR5iA'
+    'EBQg8KDV9zY3JlZW5fd2lkdGhCEAoOX3NjcmVlbl9oZWlnaHRCEQoPX3NjcmVlbl9kZW5zaXR5');
 
 @$core.Deprecated('Use rPApiMetadataDescriptor instead')
 const RPApiMetadata$json = {
@@ -90,3 +128,40 @@ final $typed_data.Uint8List rPApiMetadataDescriptor = $convert.base64Decode(
     'RvY29sLmFwaS52MS5SUEFwcE1ldGFkYXRhUgthcHBNZXRhZGF0YRJWCg9kZXZpY2VfbWV0YWRh'
     'dGEYAiABKAsyLS5wcm90by5yZW5kZXJwcm90b2NvbC5hcGkudjEuUlBEZXZpY2VNZXRhZGF0YV'
     'IOZGV2aWNlTWV0YWRhdGE=');
+
+@$core.Deprecated('Use rPSessionContextDescriptor instead')
+const RPSessionContext$json = {
+  '1': 'RPSessionContext',
+  '2': [
+    {'1': 'session_token', '3': 1, '4': 1, '5': 9, '10': 'sessionToken'},
+    {
+      '1': 'trace_id',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '9': 0,
+      '10': 'traceId',
+      '17': true
+    },
+    {
+      '1': 'locale_override',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '9': 1,
+      '10': 'localeOverride',
+      '17': true
+    },
+  ],
+  '8': [
+    {'1': '_trace_id'},
+    {'1': '_locale_override'},
+  ],
+};
+
+/// Descriptor for `RPSessionContext`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rPSessionContextDescriptor = $convert.base64Decode(
+    'ChBSUFNlc3Npb25Db250ZXh0EiMKDXNlc3Npb25fdG9rZW4YASABKAlSDHNlc3Npb25Ub2tlbh'
+    'IeCgh0cmFjZV9pZBgCIAEoCUgAUgd0cmFjZUlkiAEBEiwKD2xvY2FsZV9vdmVycmlkZRgDIAEo'
+    'CUgBUg5sb2NhbGVPdmVycmlkZYgBAUILCglfdHJhY2VfaWRCEgoQX2xvY2FsZV9vdmVycmlkZQ'
+    '==');
